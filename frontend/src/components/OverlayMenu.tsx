@@ -2,16 +2,16 @@ import type { JSX } from 'react'
 import { Link } from 'react-router-dom'
 
 type OverlayMenuProps = {
-  open: boolean
+  isOpen: boolean
   toggleMenu: () => void
 }
 
-const OverlayMenu = ({ open, toggleMenu }: OverlayMenuProps): JSX.Element => {
+const OverlayMenu = ({ isOpen, toggleMenu }: OverlayMenuProps): JSX.Element => {
   return (
     <div
       className={`fixed inset-0 bg-black bg-opacity-90 text-white flex flex-col items-center justify-center gap-6 text-2xl z-40 
         transition-opacity duration-300 ${
-          open
+          isOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
         }`}

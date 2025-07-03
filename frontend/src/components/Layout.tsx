@@ -17,7 +17,7 @@ const Layout = (): JSX.Element => {
   return (
     <>
       <NavBar toggleMenu={toggleMenu} menuOpen={menuOpen} />
-      <OverlayMenu open={menuOpen} toggleMenu={closeMenu} />
+      <OverlayMenu isOpen={menuOpen} toggleMenu={closeMenu} />
       <main className='pt-16 px-4'>
         <Outlet />
       </main>
